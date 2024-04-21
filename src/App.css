@@ -1,38 +1,124 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  margin-top: 50px;
+
+  @media screen and (max-width: 768px){
+    zoom: 0.8;
+  }
+}
+
+.TitleContainer {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-top: 20px;
+  @media screen and (max-width: 768px){
+    flex-direction: column;
+    
+  }
 }
 
-.App-link {
-  color: #61dafb;
+.Title {
+  font-size: 50px !important;
+  color: #333 !important;
+  margin-top: 20px !important;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.AI {
+  color: white !important;
+  background: linear-gradient(to right, #ff007d, #4d00ff) !important;
+  border-radius: 10px !important;
+  padding: 10px;
+  align-self: center;
+  margin-right: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+}
+
+.DescriptionContainer{
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  border: 2px solid #c9dbea;
+  border-radius: 15px;
+  width: -webkit-fill-available;
+  max-width: 600px;
+  margin: 20px 10px;
+  padding: 10px;
+  background-color: #f3f9ff;
+  color: #002e56;
+
+  @media screen and (max-width: 768px){
+    font-size: smaller;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+.DescTitle{
+  margin: 0 0 10px 0;
+}
+
+.Attention{
+  font-size: smaller;
+}
+
+.Example{
+  font-weight: bold;
+  font-size: larger;
+  margin: 0;
+}
+
+.InputContainer{
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.Input{
+  width: 500px !important;
+  margin: 0 10px !important;
+  @media screen and (max-width: 768px){
+    width: 350px !important;
+    
   }
+}
+
+.WordsContainer{
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+
+  @media screen and (max-width: 768px){
+    flex-direction: column;
+    
+  }
+}
+
+.Word{
+  padding: 5px !important;
+  margin: 10px !important;
+  border: 1px solid #cac7c7 !important;
+  border-radius: 5px !important;
+}
+
+.Loading{
+  display: flex;
+  margin-top: 20px;
+}
+
+.LoadingText{
+  font-size: large !important;
+}
+
+.Progress{
+  width: 25px !important;
+  height: 25px !important;
+  margin: 0 10px !important;
+}
+
+.Alert{
+  width: fit-content !important;
+  margin: auto !important;
+  border: 2px solid #f7d5d5 !important;
 }
