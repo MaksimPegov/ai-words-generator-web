@@ -1,10 +1,11 @@
 export const generateWordsRequest = async (topic) => {
   const response = await fetch(
-    'http://192.168.92.130:5001/generate',
+    'https://steady-firefly-grand.ngrok-free.app/generate',
     {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
+        'ngrok-skip-browser-warning': ''
       },
       body: JSON.stringify({ topic: topic })
     }
