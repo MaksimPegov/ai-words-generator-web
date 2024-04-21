@@ -13,7 +13,7 @@ export const generateWordsRequest = async (topic) => {
   const data = await response.json()
 
   if (response.status === 400){
-    throw new Error('Invalid request! Please read the instructions and try again.')
+    throw new Error(data)
   }
 
   if (!response.ok) {

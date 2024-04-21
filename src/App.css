@@ -59,6 +59,12 @@
   margin: 0 0 10px 0;
 }
 
+.Description{
+  margin: 0;
+  font-size: medium;
+  line-height: 25px;
+}
+
 .Attention{
   font-size: smaller;
 }

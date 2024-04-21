@@ -50,15 +50,16 @@ function App() {
 
       <div className='DescriptionContainer'>
         <h3 className='DescTitle'>How to use:</h3>
-        <pre className='Description'>
-          1. Enter your request in the text field below.<br/>
-          2. Specify the number of words you want to generate. <b>{"(Up to 10 is allowed)"}</b><br/>
-          3. Indicate the topic of the words you want to generate.<br/>
-          </pre>
+        <p className='Description'>
+          <b>1.</b> Enter your request in the text field below.<br/>
+          <b>2.</b> Specify the number of words you want to generate. <b>{"(Up to 10 is allowed)"}</b><br/>
+          <b>3.</b> Indicate the topic of the words you want to generate.<br/>
+        </p>
           <p className='Attention'><b>Attention:</b> Grammatical errors may occur due to the nature of the AI model..</p>
-        <pre className='Description Example'>Example: "Name me 5 flowers in spanish language"</pre>
+        <p className='Description Example'>Example: "Name me 5 flowers in spanish language"</p>
       </div>
 
+      <form onSubmit={generateWords}>
       <div className='InputContainer'>
         <TextField 
           className="Input" 
@@ -68,6 +69,7 @@ function App() {
           autoComplete="off"
           value={input}
           onChange={inputChangeHandler}
+          type='text'
         />
 
         <Button 
@@ -75,10 +77,12 @@ function App() {
           variant="contained"
           disabled={input.length === 0 || loading}
           onClick={generateWords}
+          type='submit'
         >
           generate
         </Button>
       </div>
+      </form>
 
       <div className='WordsContainer'>
         {!loading && words && words.length > 0 ? words.map((word, index) => (
