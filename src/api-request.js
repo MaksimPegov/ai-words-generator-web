@@ -1,6 +1,9 @@
 export const generateWordsRequest = async (topic) => {
+  
+  const apiUrl = process.env.API_URL;
+  console.log(apiUrl)
   const response = await fetch(
-    'https://steady-firefly-grand.ngrok-free.app/generate',
+    'http://localhost:1001/generate',
     {
       method: 'POST',
       headers: {
