@@ -55,7 +55,7 @@ function App() {
           <b>2.</b> Specify the number of words you want to generate. <b>{"(Up to 10 is allowed)"}</b><br/>
           <b>3.</b> Indicate the topic of the words you want to generate.<br/>
         </p>
-          <p className='Attention'><b>Attention:</b> Grammatical errors may occur due to the nature of the AI model..</p>
+          <p className='Attention'><b>Attention:</b> Grammatical errors may occur due to the nature of the AI model.</p>
         <p className='Description Example'>Example: "Name me 5 flowers in spanish language"</p>
       </div>
 
@@ -75,7 +75,7 @@ function App() {
         <Button 
           className="Button" 
           variant="contained"
-          disabled={input.length === 0 || loading}
+          disabled={input.trim().length === 0 || loading}
           onClick={generateWords}
           type='submit'
         >
