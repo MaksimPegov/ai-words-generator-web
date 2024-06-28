@@ -79,6 +79,10 @@
   display: flex;
   justify-content: center;
   margin-top: 20px;
+
+  @media screen and (max-width: 768px){
+    flex-direction: column;
+  }
 }
 
 .Input{
@@ -87,6 +91,7 @@
   @media screen and (max-width: 768px){
     width: 350px !important;
     
+    margin: 0 0 10px 0 !important;
   }
 }
 

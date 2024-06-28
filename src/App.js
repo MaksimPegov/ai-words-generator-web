@@ -19,7 +19,6 @@ function App() {
     setWords([])
     try {
       const data = await generateWordsRequest(input)
-      console.log(data)
       setWords(data)
       setError('')
       setLoading(false)
@@ -27,7 +26,6 @@ function App() {
       setError(error.message)
     }
     setLoading(false)
-    setInput('')
   }
   
   return (
@@ -50,12 +48,15 @@ function App() {
 
       <div className='DescriptionContainer'>
         <h3 className='DescTitle'>How to use:</h3>
+
         <p className='Description'>
           <b>1.</b> Enter your request in the text field below.<br/>
           <b>2.</b> Specify the number of words you want to generate. <b>{"(Up to 10 is allowed)"}</b><br/>
           <b>3.</b> Indicate the topic of the words you want to generate.<br/>
         </p>
-          <p className='Attention'><b>Attention:</b> Grammatical errors may occur due to the nature of the AI model.</p>
+
+        <p className='Attention'><b>Attention:</b> Grammatical errors may occur due to the nature of the AI model.</p>
+
         <p className='Description Example'>Example: "Name me 5 flowers in spanish language"</p>
       </div>
 
@@ -70,6 +71,7 @@ function App() {
           value={input}
           onChange={inputChangeHandler}
           type='text'
+          disabled={loading}
         />
 
         <Button 
@@ -105,6 +107,7 @@ function App() {
               gutterBottom>
               Loading...
             </Typography>
+
             <CircularProgress className='Progress'/>
           </div>
           : null
