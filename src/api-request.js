@@ -1,14 +1,12 @@
 export const generateWordsRequest = async (topic) => {
-  
-  const apiUrl = process.env.API_URL;
-  console.log(apiUrl)
+
   const response = await fetch(
-    'http://localhost:1001/generate',
+    'http://54.193.46.88:1001/generate',
     {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'ngrok-skip-browser-warning': ''
+        'Access-Control-Allow-Origin': '*'
       },
       body: JSON.stringify({ topic: topic })
     }
