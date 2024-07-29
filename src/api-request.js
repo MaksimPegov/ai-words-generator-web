@@ -1,7 +1,7 @@
 export const generateWordsRequest = async (topic) => {
 
   const response = await fetch(
-    'http://54.193.46.88:1001/generate',
+    'pretty-radiance.railway.internal:1001/generate',
     {
       method: 'POST',
       headers: {
