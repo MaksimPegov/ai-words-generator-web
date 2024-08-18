@@ -1,7 +1,7 @@
 export const generateWordsRequest = async (topic) => {
 
   const response = await fetch(
-    'https://words-generator-api.railway.internal/generate',
+    'https://words-generator-api.up.railway.app/generate',
     {
       method: 'POST',
       headers: {
