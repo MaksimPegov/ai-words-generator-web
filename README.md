@@ -15,7 +15,7 @@ This is the frontend interface for the Flask-based OpenAPI that generates words 
 
 1. **Access the Frontend**: Open your web browser and go to the following URL:
 
-   **[Frontend URL](http://your-frontend-url.com)**
+https://words-generator.up.railway.app/
 
 2. **Enter a Topic**: Use the input field to type in the topic you want to generate words for.
 
